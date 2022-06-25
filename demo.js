@@ -20,7 +20,8 @@
 // server.listen(3000);
 
 //-----------------------------MIGRATE TO EXPRESS JS---------------------------------//
-//require a request using express function
+const path = require('path');
+const fs = require('fs');
 const express = require('express');
 
 const app = express();
@@ -38,7 +39,16 @@ app.get('/', function(req, res){
 
 app.post('/store-user', function(req, res){
     const userName = req.body.username;
-    console.log(userName);
+
+    const filePath = path.join(__dirname, 'data', 'users.json');
+    const fileData = fs.readFileSync(filePath);
+    const existingUsers = JSON.parse(fileData);
+
+    existingUsers.push(userName);
+
+    fs.writeFileSync(filePath, JSON.stringify(existingUsers));
+
+    // console.log(userName);
     res.send("<h3>User stored!");
 });
 
