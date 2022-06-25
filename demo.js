@@ -20,13 +20,17 @@
 // server.listen(3000);
 
 //-----------------------------MIGRATE TO EXPRESS JS---------------------------------//
+//TO USE THIS PROJECT, INSTALL THE FF
+//npm init
+//npm install express
+//npm --save-dev nodemon
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
 
 const app = express();
 
-//TO HANDLE ALL REQUESTS 
+//TO HANDLE DATA FROM REQUESTS e.g. parse body to js
 app.use(express.urlencoded({extended: false}));
 
 //ROUTE FOR CURRENTTIME PAGE
