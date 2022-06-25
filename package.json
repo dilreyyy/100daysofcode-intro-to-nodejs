@@ -1,0 +1,22 @@
+{
+  "name": "07.-nodejs-demo",
+  "version": "1.0.0",
+  "description": "Intro to NodeJS and ExpressJS",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilreyyy/100daysofcode-intro-to-nodejs.git"
+  },
+  "author": "Rodel Rey Gamosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilreyyy/100daysofcode-intro-to-nodejs/issues"
+  },
+  "homepage": "https://github.com/dilreyyy/100daysofcode-intro-to-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
